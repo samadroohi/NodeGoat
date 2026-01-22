@@ -19,7 +19,7 @@ jobs:
       SECURITY_AGENT_REF: main
       # Optional: set this secret in the *target repo* if `samadroohi/security-agent` is private.
       # Repo Settings -> Secrets and variables -> Actions -> New repository secret
-      SECURITY_AGENT_TOKEN: ${{ secrets.SECURITY_AGENT_TOKEN}}
+      SECURITY_AGENT_TOKEN: ${{secrets.SECURITY_AGENT_TOKEN}}
 
     steps:
       - name: Checkout
