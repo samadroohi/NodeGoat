@@ -1,0 +1,2832 @@
+[
+  {
+    "group_key": "57da8d998e56602310ff696d3c195d798aa92dbb4a911533bd031dcfab313ed9",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+    "start_line": 32,
+    "end_line": 32,
+    "cwe": "CWE-95",
+    "severity": "high",
+    "confidence": "high",
+    "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:javascript.lang.security.audit.code-string-concat.code-string-concat"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+      "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+      "start_line": 32,
+      "end_line": 32,
+      "severity": "high",
+      "confidence": "high",
+      "cwe": "CWE-95",
+      "snippet": "const preTax = eval(req.body.preTax);",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+            "start": {
+              "line": 32,
+              "col": 24,
+              "offset": 934
+            },
+            "end": {
+              "line": 32,
+              "col": 45,
+              "offset": 955
+            },
+            "extra": {
+              "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+              "metadata": {
+                "interfile": true,
+                "confidence": "HIGH",
+                "owasp": [
+                  "A03:2021 - Injection",
+                  "A05:2025 - Injection"
+                ],
+                "cwe": [
+                  "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+                ],
+                "references": [
+                  "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                  "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                  "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                  "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+                ],
+                "category": "security",
+                "technology": [
+                  "node.js",
+                  "Express",
+                  "Next.js"
+                ],
+                "subcategory": [
+                  "vuln"
+                ],
+                "likelihood": "MEDIUM",
+                "impact": "MEDIUM",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Code Injection"
+                ],
+                "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+                "shortlink": "https://sg.run/96Yk"
+              },
+              "severity": "ERROR",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "interfile": true,
+            "confidence": "HIGH",
+            "owasp": [
+              "A03:2021 - Injection",
+              "A05:2025 - Injection"
+            ],
+            "cwe": [
+              "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+            ],
+            "references": [
+              "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+              "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+              "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+              "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+            ],
+            "category": "security",
+            "technology": [
+              "node.js",
+              "Express",
+              "Next.js"
+            ],
+            "subcategory": [
+              "vuln"
+            ],
+            "likelihood": "MEDIUM",
+            "impact": "MEDIUM",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Code Injection"
+            ],
+            "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+            "shortlink": "https://sg.run/96Yk"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "da2d12eb508cb5ff6b6e8ae298608a00e36ba1e97bc319295495ab608140b70a",
+      "group_key": "57da8d998e56602310ff696d3c195d798aa92dbb4a911533bd031dcfab313ed9"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+        "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+        "start_line": 32,
+        "end_line": 32,
+        "severity": "high",
+        "confidence": "high",
+        "cwe": "CWE-95",
+        "snippet": "const preTax = eval(req.body.preTax);",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+              "start": {
+                "line": 32,
+                "col": 24,
+                "offset": 934
+              },
+              "end": {
+                "line": 32,
+                "col": 45,
+                "offset": 955
+              },
+              "extra": {
+                "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+                "metadata": {
+                  "interfile": true,
+                  "confidence": "HIGH",
+                  "owasp": [
+                    "A03:2021 - Injection",
+                    "A05:2025 - Injection"
+                  ],
+                  "cwe": [
+                    "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+                  ],
+                  "references": [
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                    "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                    "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                    "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+                  ],
+                  "category": "security",
+                  "technology": [
+                    "node.js",
+                    "Express",
+                    "Next.js"
+                  ],
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "MEDIUM",
+                  "impact": "MEDIUM",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Code Injection"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+                  "shortlink": "https://sg.run/96Yk"
+                },
+                "severity": "ERROR",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "interfile": true,
+              "confidence": "HIGH",
+              "owasp": [
+                "A03:2021 - Injection",
+                "A05:2025 - Injection"
+              ],
+              "cwe": [
+                "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+              ],
+              "references": [
+                "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+              ],
+              "category": "security",
+              "technology": [
+                "node.js",
+                "Express",
+                "Next.js"
+              ],
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "MEDIUM",
+              "impact": "MEDIUM",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Code Injection"
+              ],
+              "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+              "shortlink": "https://sg.run/96Yk"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "da2d12eb508cb5ff6b6e8ae298608a00e36ba1e97bc319295495ab608140b70a",
+        "group_key": "57da8d998e56602310ff696d3c195d798aa92dbb4a911533bd031dcfab313ed9"
+      }
+    ]
+  },
+  {
+    "group_key": "caf33f44e3217e2796ed8a7dd275428582c8834ade1aaffd2b286a021580dbd4",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+    "start_line": 33,
+    "end_line": 33,
+    "cwe": "CWE-95",
+    "severity": "high",
+    "confidence": "high",
+    "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:javascript.lang.security.audit.code-string-concat.code-string-concat"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+      "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+      "start_line": 33,
+      "end_line": 33,
+      "severity": "high",
+      "confidence": "high",
+      "cwe": "CWE-95",
+      "snippet": "const afterTax = eval(req.body.afterTax);",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+            "start": {
+              "line": 33,
+              "col": 26,
+              "offset": 982
+            },
+            "end": {
+              "line": 33,
+              "col": 49,
+              "offset": 1005
+            },
+            "extra": {
+              "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+              "metadata": {
+                "interfile": true,
+                "confidence": "HIGH",
+                "owasp": [
+                  "A03:2021 - Injection",
+                  "A05:2025 - Injection"
+                ],
+                "cwe": [
+                  "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+                ],
+                "references": [
+                  "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                  "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                  "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                  "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+                ],
+                "category": "security",
+                "technology": [
+                  "node.js",
+                  "Express",
+                  "Next.js"
+                ],
+                "subcategory": [
+                  "vuln"
+                ],
+                "likelihood": "MEDIUM",
+                "impact": "MEDIUM",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Code Injection"
+                ],
+                "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+                "shortlink": "https://sg.run/96Yk"
+              },
+              "severity": "ERROR",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "interfile": true,
+            "confidence": "HIGH",
+            "owasp": [
+              "A03:2021 - Injection",
+              "A05:2025 - Injection"
+            ],
+            "cwe": [
+              "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+            ],
+            "references": [
+              "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+              "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+              "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+              "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+            ],
+            "category": "security",
+            "technology": [
+              "node.js",
+              "Express",
+              "Next.js"
+            ],
+            "subcategory": [
+              "vuln"
+            ],
+            "likelihood": "MEDIUM",
+            "impact": "MEDIUM",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Code Injection"
+            ],
+            "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+            "shortlink": "https://sg.run/96Yk"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "55f3407eee9d5c2443969f6554752559227699d59809d3563bc1547a3bcfcfdb",
+      "group_key": "caf33f44e3217e2796ed8a7dd275428582c8834ade1aaffd2b286a021580dbd4"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+        "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+        "start_line": 33,
+        "end_line": 33,
+        "severity": "high",
+        "confidence": "high",
+        "cwe": "CWE-95",
+        "snippet": "const afterTax = eval(req.body.afterTax);",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+              "start": {
+                "line": 33,
+                "col": 26,
+                "offset": 982
+              },
+              "end": {
+                "line": 33,
+                "col": 49,
+                "offset": 1005
+              },
+              "extra": {
+                "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+                "metadata": {
+                  "interfile": true,
+                  "confidence": "HIGH",
+                  "owasp": [
+                    "A03:2021 - Injection",
+                    "A05:2025 - Injection"
+                  ],
+                  "cwe": [
+                    "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+                  ],
+                  "references": [
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                    "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                    "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                    "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+                  ],
+                  "category": "security",
+                  "technology": [
+                    "node.js",
+                    "Express",
+                    "Next.js"
+                  ],
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "MEDIUM",
+                  "impact": "MEDIUM",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Code Injection"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+                  "shortlink": "https://sg.run/96Yk"
+                },
+                "severity": "ERROR",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "interfile": true,
+              "confidence": "HIGH",
+              "owasp": [
+                "A03:2021 - Injection",
+                "A05:2025 - Injection"
+              ],
+              "cwe": [
+                "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+              ],
+              "references": [
+                "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+              ],
+              "category": "security",
+              "technology": [
+                "node.js",
+                "Express",
+                "Next.js"
+              ],
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "MEDIUM",
+              "impact": "MEDIUM",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Code Injection"
+              ],
+              "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+              "shortlink": "https://sg.run/96Yk"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "55f3407eee9d5c2443969f6554752559227699d59809d3563bc1547a3bcfcfdb",
+        "group_key": "caf33f44e3217e2796ed8a7dd275428582c8834ade1aaffd2b286a021580dbd4"
+      }
+    ]
+  },
+  {
+    "group_key": "a3665f844a544b5152dc3112d57982a535f12f4cd54d19ec155acc27445ddd69",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+    "start_line": 34,
+    "end_line": 34,
+    "cwe": "CWE-95",
+    "severity": "high",
+    "confidence": "high",
+    "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:javascript.lang.security.audit.code-string-concat.code-string-concat"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+      "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+      "start_line": 34,
+      "end_line": 34,
+      "severity": "high",
+      "confidence": "high",
+      "cwe": "CWE-95",
+      "snippet": "const roth = eval(req.body.roth);",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+            "start": {
+              "line": 34,
+              "col": 22,
+              "offset": 1028
+            },
+            "end": {
+              "line": 34,
+              "col": 41,
+              "offset": 1047
+            },
+            "extra": {
+              "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+              "metadata": {
+                "interfile": true,
+                "confidence": "HIGH",
+                "owasp": [
+                  "A03:2021 - Injection",
+                  "A05:2025 - Injection"
+                ],
+                "cwe": [
+                  "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+                ],
+                "references": [
+                  "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                  "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                  "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                  "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+                ],
+                "category": "security",
+                "technology": [
+                  "node.js",
+                  "Express",
+                  "Next.js"
+                ],
+                "subcategory": [
+                  "vuln"
+                ],
+                "likelihood": "MEDIUM",
+                "impact": "MEDIUM",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Code Injection"
+                ],
+                "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+                "shortlink": "https://sg.run/96Yk"
+              },
+              "severity": "ERROR",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "interfile": true,
+            "confidence": "HIGH",
+            "owasp": [
+              "A03:2021 - Injection",
+              "A05:2025 - Injection"
+            ],
+            "cwe": [
+              "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+            ],
+            "references": [
+              "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+              "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+              "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+              "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+            ],
+            "category": "security",
+            "technology": [
+              "node.js",
+              "Express",
+              "Next.js"
+            ],
+            "subcategory": [
+              "vuln"
+            ],
+            "likelihood": "MEDIUM",
+            "impact": "MEDIUM",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Code Injection"
+            ],
+            "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+            "shortlink": "https://sg.run/96Yk"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "5382806d6c103b7222d007b8312b6d21f13609c985158164352d5b23a6d8ada9",
+      "group_key": "a3665f844a544b5152dc3112d57982a535f12f4cd54d19ec155acc27445ddd69"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+        "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+        "start_line": 34,
+        "end_line": 34,
+        "severity": "high",
+        "confidence": "high",
+        "cwe": "CWE-95",
+        "snippet": "const roth = eval(req.body.roth);",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.lang.security.audit.code-string-concat.code-string-concat",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/contributions.js",
+              "start": {
+                "line": 34,
+                "col": 22,
+                "offset": 1028
+              },
+              "end": {
+                "line": 34,
+                "col": 41,
+                "offset": 1047
+              },
+              "extra": {
+                "message": "Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system commands in the context of your application process. Avoid `eval` whenever possible.",
+                "metadata": {
+                  "interfile": true,
+                  "confidence": "HIGH",
+                  "owasp": [
+                    "A03:2021 - Injection",
+                    "A05:2025 - Injection"
+                  ],
+                  "cwe": [
+                    "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+                  ],
+                  "references": [
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                    "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                    "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                    "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+                  ],
+                  "category": "security",
+                  "technology": [
+                    "node.js",
+                    "Express",
+                    "Next.js"
+                  ],
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "MEDIUM",
+                  "impact": "MEDIUM",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Code Injection"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+                  "shortlink": "https://sg.run/96Yk"
+                },
+                "severity": "ERROR",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "interfile": true,
+              "confidence": "HIGH",
+              "owasp": [
+                "A03:2021 - Injection",
+                "A05:2025 - Injection"
+              ],
+              "cwe": [
+                "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+              ],
+              "references": [
+                "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+                "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback",
+                "https://www.stackhawk.com/blog/nodejs-command-injection-examples-and-prevention/",
+                "https://ckarande.gitbooks.io/owasp-nodegoat-tutorial/content/tutorial/a1_-_server_side_js_injection.html"
+              ],
+              "category": "security",
+              "technology": [
+                "node.js",
+                "Express",
+                "Next.js"
+              ],
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "MEDIUM",
+              "impact": "MEDIUM",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Code Injection"
+              ],
+              "source": "https://semgrep.dev/r/javascript.lang.security.audit.code-string-concat.code-string-concat",
+              "shortlink": "https://sg.run/96Yk"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "5382806d6c103b7222d007b8312b6d21f13609c985158164352d5b23a6d8ada9",
+        "group_key": "a3665f844a544b5152dc3112d57982a535f12f4cd54d19ec155acc27445ddd69"
+      }
+    ]
+  },
+  {
+    "group_key": "54c8dd695fc7dac6a9cff0a1e9768cda1dccb4c1cc6ef6b7f580130b5b8af221",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/index.js",
+    "start_line": 72,
+    "end_line": 72,
+    "cwe": "CWE-601",
+    "severity": "medium",
+    "confidence": "high",
+    "message": "The application redirects to a URL specified by user-supplied input `req` that is not validated. This could redirect users to malicious locations. Consider using an allow-list approach to validate URLs, or warn users they are being redirected to a third-party website.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:javascript.express.security.audit.express-open-redirect.express-open-redirect"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "javascript.express.security.audit.express-open-redirect.express-open-redirect",
+      "message": "The application redirects to a URL specified by user-supplied input `req` that is not validated. This could redirect users to malicious locations. Consider using an allow-list approach to validate URLs, or warn users they are being redirected to a third-party website.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/index.js",
+      "start_line": 72,
+      "end_line": 72,
+      "severity": "medium",
+      "confidence": "high",
+      "cwe": "CWE-601",
+      "snippet": "return res.redirect(req.query.url);",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "javascript.express.security.audit.express-open-redirect.express-open-redirect",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/index.js",
+            "start": {
+              "line": 72,
+              "col": 29,
+              "offset": 2871
+            },
+            "end": {
+              "line": 72,
+              "col": 42,
+              "offset": 2884
+            },
+            "extra": {
+              "message": "The application redirects to a URL specified by user-supplied input `req` that is not validated. This could redirect users to malicious locations. Consider using an allow-list approach to validate URLs, or warn users they are being redirected to a third-party website.",
+              "metadata": {
+                "technology": [
+                  "express"
+                ],
+                "references": [
+                  "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html"
+                ],
+                "cwe": [
+                  "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+                ],
+                "category": "security",
+                "owasp": [
+                  "A01:2021 - Broken Access Control",
+                  "A01:2025 - Broken Access Control"
+                ],
+                "subcategory": [
+                  "vuln"
+                ],
+                "likelihood": "HIGH",
+                "impact": "MEDIUM",
+                "confidence": "HIGH",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Open Redirect"
+                ],
+                "source": "https://semgrep.dev/r/javascript.express.security.audit.express-open-redirect.express-open-redirect",
+                "shortlink": "https://sg.run/EpoP"
+              },
+              "severity": "WARNING",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "technology": [
+              "express"
+            ],
+            "references": [
+              "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html"
+            ],
+            "cwe": [
+              "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+            ],
+            "category": "security",
+            "owasp": [
+              "A01:2021 - Broken Access Control",
+              "A01:2025 - Broken Access Control"
+            ],
+            "subcategory": [
+              "vuln"
+            ],
+            "likelihood": "HIGH",
+            "impact": "MEDIUM",
+            "confidence": "HIGH",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Open Redirect"
+            ],
+            "source": "https://semgrep.dev/r/javascript.express.security.audit.express-open-redirect.express-open-redirect",
+            "shortlink": "https://sg.run/EpoP"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "ed798a3c694eb3d097d57fc9c77e78ac60a53f2999de0456b38f207df372bcee",
+      "group_key": "54c8dd695fc7dac6a9cff0a1e9768cda1dccb4c1cc6ef6b7f580130b5b8af221"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.express.security.audit.express-open-redirect.express-open-redirect",
+        "message": "The application redirects to a URL specified by user-supplied input `req` that is not validated. This could redirect users to malicious locations. Consider using an allow-list approach to validate URLs, or warn users they are being redirected to a third-party website.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/index.js",
+        "start_line": 72,
+        "end_line": 72,
+        "severity": "medium",
+        "confidence": "high",
+        "cwe": "CWE-601",
+        "snippet": "return res.redirect(req.query.url);",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.express.security.audit.express-open-redirect.express-open-redirect",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/routes/index.js",
+              "start": {
+                "line": 72,
+                "col": 29,
+                "offset": 2871
+              },
+              "end": {
+                "line": 72,
+                "col": 42,
+                "offset": 2884
+              },
+              "extra": {
+                "message": "The application redirects to a URL specified by user-supplied input `req` that is not validated. This could redirect users to malicious locations. Consider using an allow-list approach to validate URLs, or warn users they are being redirected to a third-party website.",
+                "metadata": {
+                  "technology": [
+                    "express"
+                  ],
+                  "references": [
+                    "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html"
+                  ],
+                  "cwe": [
+                    "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+                  ],
+                  "category": "security",
+                  "owasp": [
+                    "A01:2021 - Broken Access Control",
+                    "A01:2025 - Broken Access Control"
+                  ],
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "HIGH",
+                  "impact": "MEDIUM",
+                  "confidence": "HIGH",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Open Redirect"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.express.security.audit.express-open-redirect.express-open-redirect",
+                  "shortlink": "https://sg.run/EpoP"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "technology": [
+                "express"
+              ],
+              "references": [
+                "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html"
+              ],
+              "cwe": [
+                "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+              ],
+              "category": "security",
+              "owasp": [
+                "A01:2021 - Broken Access Control",
+                "A01:2025 - Broken Access Control"
+              ],
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "HIGH",
+              "impact": "MEDIUM",
+              "confidence": "HIGH",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Open Redirect"
+              ],
+              "source": "https://semgrep.dev/r/javascript.express.security.audit.express-open-redirect.express-open-redirect",
+              "shortlink": "https://sg.run/EpoP"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "ed798a3c694eb3d097d57fc9c77e78ac60a53f2999de0456b38f207df372bcee",
+        "group_key": "54c8dd695fc7dac6a9cff0a1e9768cda1dccb4c1cc6ef6b7f580130b5b8af221"
+      }
+    ]
+  },
+  {
+    "group_key": "aebb32e892b504db78d53ec2ee1e269f7f675a80bf32dbb3b58f43cae9832206",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+    "start_line": 207,
+    "end_line": 207,
+    "cwe": "CWE-319",
+    "severity": "medium",
+    "confidence": "high",
+    "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:html.security.plaintext-http-link.plaintext-http-link"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+      "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+      "start_line": 207,
+      "end_line": 207,
+      "severity": "medium",
+      "confidence": "high",
+      "cwe": "CWE-319",
+      "snippet": "<li><a href=\"http://recxltd.blogspot.sg/2012/03/seven-web-server-http-headers-that.html\">Seven Web Server HTTP Headers that Improve Web Application Security for Free</a>",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+            "start": {
+              "line": 207,
+              "col": 33,
+              "offset": 11227
+            },
+            "end": {
+              "line": 207,
+              "col": 198,
+              "offset": 11392
+            },
+            "extra": {
+              "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+              "metadata": {
+                "category": "security",
+                "technology": [
+                  "html"
+                ],
+                "cwe": [
+                  "CWE-319: Cleartext Transmission of Sensitive Information"
+                ],
+                "owasp": [
+                  "A03:2017 - Sensitive Data Exposure",
+                  "A02:2021 - Cryptographic Failures",
+                  "A04:2025 - Cryptographic Failures"
+                ],
+                "confidence": "HIGH",
+                "subcategory": [
+                  "vuln"
+                ],
+                "references": [
+                  "https://cwe.mitre.org/data/definitions/319.html"
+                ],
+                "likelihood": "LOW",
+                "impact": "LOW",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Mishandled Sensitive Information"
+                ],
+                "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                "shortlink": "https://sg.run/RA5q"
+              },
+              "severity": "WARNING",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "category": "security",
+            "technology": [
+              "html"
+            ],
+            "cwe": [
+              "CWE-319: Cleartext Transmission of Sensitive Information"
+            ],
+            "owasp": [
+              "A03:2017 - Sensitive Data Exposure",
+              "A02:2021 - Cryptographic Failures",
+              "A04:2025 - Cryptographic Failures"
+            ],
+            "confidence": "HIGH",
+            "subcategory": [
+              "vuln"
+            ],
+            "references": [
+              "https://cwe.mitre.org/data/definitions/319.html"
+            ],
+            "likelihood": "LOW",
+            "impact": "LOW",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Mishandled Sensitive Information"
+            ],
+            "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+            "shortlink": "https://sg.run/RA5q"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "0e87969764e1f9835dd958a47bd876386689ed71255081b9e19df48396310ba8",
+      "group_key": "aebb32e892b504db78d53ec2ee1e269f7f675a80bf32dbb3b58f43cae9832206"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+        "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+        "start_line": 207,
+        "end_line": 207,
+        "severity": "medium",
+        "confidence": "high",
+        "cwe": "CWE-319",
+        "snippet": "<li><a href=\"http://recxltd.blogspot.sg/2012/03/seven-web-server-http-headers-that.html\">Seven Web Server HTTP Headers that Improve Web Application Security for Free</a>",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+              "start": {
+                "line": 207,
+                "col": 33,
+                "offset": 11227
+              },
+              "end": {
+                "line": 207,
+                "col": 198,
+                "offset": 11392
+              },
+              "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                  "category": "security",
+                  "technology": [
+                    "html"
+                  ],
+                  "cwe": [
+                    "CWE-319: Cleartext Transmission of Sensitive Information"
+                  ],
+                  "owasp": [
+                    "A03:2017 - Sensitive Data Exposure",
+                    "A02:2021 - Cryptographic Failures",
+                    "A04:2025 - Cryptographic Failures"
+                  ],
+                  "confidence": "HIGH",
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "references": [
+                    "https://cwe.mitre.org/data/definitions/319.html"
+                  ],
+                  "likelihood": "LOW",
+                  "impact": "LOW",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Mishandled Sensitive Information"
+                  ],
+                  "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                  "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "category": "security",
+              "technology": [
+                "html"
+              ],
+              "cwe": [
+                "CWE-319: Cleartext Transmission of Sensitive Information"
+              ],
+              "owasp": [
+                "A03:2017 - Sensitive Data Exposure",
+                "A02:2021 - Cryptographic Failures",
+                "A04:2025 - Cryptographic Failures"
+              ],
+              "confidence": "HIGH",
+              "subcategory": [
+                "vuln"
+              ],
+              "references": [
+                "https://cwe.mitre.org/data/definitions/319.html"
+              ],
+              "likelihood": "LOW",
+              "impact": "LOW",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Mishandled Sensitive Information"
+              ],
+              "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+              "shortlink": "https://sg.run/RA5q"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "0e87969764e1f9835dd958a47bd876386689ed71255081b9e19df48396310ba8",
+        "group_key": "aebb32e892b504db78d53ec2ee1e269f7f675a80bf32dbb3b58f43cae9832206"
+      }
+    ]
+  },
+  {
+    "group_key": "57248bf47ddc70816c98b9c58a7fed4d419a8a08fd22075e917edb0f63170d46",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+    "start_line": 209,
+    "end_line": 209,
+    "cwe": "CWE-319",
+    "severity": "medium",
+    "confidence": "high",
+    "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:html.security.plaintext-http-link.plaintext-http-link"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+      "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+      "start_line": 209,
+      "end_line": 209,
+      "severity": "medium",
+      "confidence": "high",
+      "cwe": "CWE-319",
+      "snippet": "<li><a href=\"http://passportjs.org/guide/authenticate/\">Passport</a> authentication middleware</li>",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+            "start": {
+              "line": 209,
+              "col": 33,
+              "offset": 11459
+            },
+            "end": {
+              "line": 209,
+              "col": 97,
+              "offset": 11523
+            },
+            "extra": {
+              "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+              "metadata": {
+                "category": "security",
+                "technology": [
+                  "html"
+                ],
+                "cwe": [
+                  "CWE-319: Cleartext Transmission of Sensitive Information"
+                ],
+                "owasp": [
+                  "A03:2017 - Sensitive Data Exposure",
+                  "A02:2021 - Cryptographic Failures",
+                  "A04:2025 - Cryptographic Failures"
+                ],
+                "confidence": "HIGH",
+                "subcategory": [
+                  "vuln"
+                ],
+                "references": [
+                  "https://cwe.mitre.org/data/definitions/319.html"
+                ],
+                "likelihood": "LOW",
+                "impact": "LOW",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Mishandled Sensitive Information"
+                ],
+                "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                "shortlink": "https://sg.run/RA5q"
+              },
+              "severity": "WARNING",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "category": "security",
+            "technology": [
+              "html"
+            ],
+            "cwe": [
+              "CWE-319: Cleartext Transmission of Sensitive Information"
+            ],
+            "owasp": [
+              "A03:2017 - Sensitive Data Exposure",
+              "A02:2021 - Cryptographic Failures",
+              "A04:2025 - Cryptographic Failures"
+            ],
+            "confidence": "HIGH",
+            "subcategory": [
+              "vuln"
+            ],
+            "references": [
+              "https://cwe.mitre.org/data/definitions/319.html"
+            ],
+            "likelihood": "LOW",
+            "impact": "LOW",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Mishandled Sensitive Information"
+            ],
+            "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+            "shortlink": "https://sg.run/RA5q"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "2dea91df8930ab22dbc40c653b0dce010f83765e33d65148007eaf2bec620e24",
+      "group_key": "57248bf47ddc70816c98b9c58a7fed4d419a8a08fd22075e917edb0f63170d46"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+        "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+        "start_line": 209,
+        "end_line": 209,
+        "severity": "medium",
+        "confidence": "high",
+        "cwe": "CWE-319",
+        "snippet": "<li><a href=\"http://passportjs.org/guide/authenticate/\">Passport</a> authentication middleware</li>",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+              "start": {
+                "line": 209,
+                "col": 33,
+                "offset": 11459
+              },
+              "end": {
+                "line": 209,
+                "col": 97,
+                "offset": 11523
+              },
+              "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                  "category": "security",
+                  "technology": [
+                    "html"
+                  ],
+                  "cwe": [
+                    "CWE-319: Cleartext Transmission of Sensitive Information"
+                  ],
+                  "owasp": [
+                    "A03:2017 - Sensitive Data Exposure",
+                    "A02:2021 - Cryptographic Failures",
+                    "A04:2025 - Cryptographic Failures"
+                  ],
+                  "confidence": "HIGH",
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "references": [
+                    "https://cwe.mitre.org/data/definitions/319.html"
+                  ],
+                  "likelihood": "LOW",
+                  "impact": "LOW",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Mishandled Sensitive Information"
+                  ],
+                  "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                  "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "category": "security",
+              "technology": [
+                "html"
+              ],
+              "cwe": [
+                "CWE-319: Cleartext Transmission of Sensitive Information"
+              ],
+              "owasp": [
+                "A03:2017 - Sensitive Data Exposure",
+                "A02:2021 - Cryptographic Failures",
+                "A04:2025 - Cryptographic Failures"
+              ],
+              "confidence": "HIGH",
+              "subcategory": [
+                "vuln"
+              ],
+              "references": [
+                "https://cwe.mitre.org/data/definitions/319.html"
+              ],
+              "likelihood": "LOW",
+              "impact": "LOW",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Mishandled Sensitive Information"
+              ],
+              "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+              "shortlink": "https://sg.run/RA5q"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "2dea91df8930ab22dbc40c653b0dce010f83765e33d65148007eaf2bec620e24",
+        "group_key": "57248bf47ddc70816c98b9c58a7fed4d419a8a08fd22075e917edb0f63170d46"
+      }
+    ]
+  },
+  {
+    "group_key": "920b62838a16530f4027a3d7dd13b9d9265d9d601fb06d4be3332e7c1c7af7af",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+    "start_line": 210,
+    "end_line": 210,
+    "cwe": "CWE-319",
+    "severity": "medium",
+    "confidence": "high",
+    "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:html.security.plaintext-http-link.plaintext-http-link"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+      "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+      "start_line": 210,
+      "end_line": 210,
+      "severity": "medium",
+      "confidence": "high",
+      "cwe": "CWE-319",
+      "snippet": "<li><a href=\"http://en.wikipedia.org/wiki/Session_fixation\">CWE-384: Session Fixation</a>",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+            "start": {
+              "line": 210,
+              "col": 33,
+              "offset": 11587
+            },
+            "end": {
+              "line": 210,
+              "col": 118,
+              "offset": 11672
+            },
+            "extra": {
+              "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+              "metadata": {
+                "category": "security",
+                "technology": [
+                  "html"
+                ],
+                "cwe": [
+                  "CWE-319: Cleartext Transmission of Sensitive Information"
+                ],
+                "owasp": [
+                  "A03:2017 - Sensitive Data Exposure",
+                  "A02:2021 - Cryptographic Failures",
+                  "A04:2025 - Cryptographic Failures"
+                ],
+                "confidence": "HIGH",
+                "subcategory": [
+                  "vuln"
+                ],
+                "references": [
+                  "https://cwe.mitre.org/data/definitions/319.html"
+                ],
+                "likelihood": "LOW",
+                "impact": "LOW",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Mishandled Sensitive Information"
+                ],
+                "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                "shortlink": "https://sg.run/RA5q"
+              },
+              "severity": "WARNING",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "category": "security",
+            "technology": [
+              "html"
+            ],
+            "cwe": [
+              "CWE-319: Cleartext Transmission of Sensitive Information"
+            ],
+            "owasp": [
+              "A03:2017 - Sensitive Data Exposure",
+              "A02:2021 - Cryptographic Failures",
+              "A04:2025 - Cryptographic Failures"
+            ],
+            "confidence": "HIGH",
+            "subcategory": [
+              "vuln"
+            ],
+            "references": [
+              "https://cwe.mitre.org/data/definitions/319.html"
+            ],
+            "likelihood": "LOW",
+            "impact": "LOW",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Mishandled Sensitive Information"
+            ],
+            "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+            "shortlink": "https://sg.run/RA5q"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "0d7c6f9d392c134461e13616625a9e02e5916ddc21a6d8a2e63d3d0b222d6680",
+      "group_key": "920b62838a16530f4027a3d7dd13b9d9265d9d601fb06d4be3332e7c1c7af7af"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+        "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+        "start_line": 210,
+        "end_line": 210,
+        "severity": "medium",
+        "confidence": "high",
+        "cwe": "CWE-319",
+        "snippet": "<li><a href=\"http://en.wikipedia.org/wiki/Session_fixation\">CWE-384: Session Fixation</a>",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a2.html",
+              "start": {
+                "line": 210,
+                "col": 33,
+                "offset": 11587
+              },
+              "end": {
+                "line": 210,
+                "col": 118,
+                "offset": 11672
+              },
+              "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                  "category": "security",
+                  "technology": [
+                    "html"
+                  ],
+                  "cwe": [
+                    "CWE-319: Cleartext Transmission of Sensitive Information"
+                  ],
+                  "owasp": [
+                    "A03:2017 - Sensitive Data Exposure",
+                    "A02:2021 - Cryptographic Failures",
+                    "A04:2025 - Cryptographic Failures"
+                  ],
+                  "confidence": "HIGH",
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "references": [
+                    "https://cwe.mitre.org/data/definitions/319.html"
+                  ],
+                  "likelihood": "LOW",
+                  "impact": "LOW",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Mishandled Sensitive Information"
+                  ],
+                  "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                  "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "category": "security",
+              "technology": [
+                "html"
+              ],
+              "cwe": [
+                "CWE-319: Cleartext Transmission of Sensitive Information"
+              ],
+              "owasp": [
+                "A03:2017 - Sensitive Data Exposure",
+                "A02:2021 - Cryptographic Failures",
+                "A04:2025 - Cryptographic Failures"
+              ],
+              "confidence": "HIGH",
+              "subcategory": [
+                "vuln"
+              ],
+              "references": [
+                "https://cwe.mitre.org/data/definitions/319.html"
+              ],
+              "likelihood": "LOW",
+              "impact": "LOW",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Mishandled Sensitive Information"
+              ],
+              "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+              "shortlink": "https://sg.run/RA5q"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "0d7c6f9d392c134461e13616625a9e02e5916ddc21a6d8a2e63d3d0b222d6680",
+        "group_key": "920b62838a16530f4027a3d7dd13b9d9265d9d601fb06d4be3332e7c1c7af7af"
+      }
+    ]
+  },
+  {
+    "group_key": "63a6760c20cd9d6be3123a38316b228d3a4d46cfd0fba11ae839407d3e85e46d",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+    "start_line": 50,
+    "end_line": 50,
+    "cwe": "CWE-319",
+    "severity": "medium",
+    "confidence": "high",
+    "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:html.security.plaintext-http-link.plaintext-http-link"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+      "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+      "start_line": 50,
+      "end_line": 50,
+      "severity": "medium",
+      "confidence": "high",
+      "cwe": "CWE-319",
+      "snippet": "Use latest stable version of node.js and express (or other web framework you are using). Keep a watch on published vulnerabilities of these. The vulnerabilities for node.js and express.js can be found <a href=\"http://blog.nodejs.org/vulnerability/\">here</a> and",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+            "start": {
+              "line": 50,
+              "col": 226,
+              "offset": 3084
+            },
+            "end": {
+              "line": 50,
+              "col": 282,
+              "offset": 3140
+            },
+            "extra": {
+              "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+              "metadata": {
+                "category": "security",
+                "technology": [
+                  "html"
+                ],
+                "cwe": [
+                  "CWE-319: Cleartext Transmission of Sensitive Information"
+                ],
+                "owasp": [
+                  "A03:2017 - Sensitive Data Exposure",
+                  "A02:2021 - Cryptographic Failures",
+                  "A04:2025 - Cryptographic Failures"
+                ],
+                "confidence": "HIGH",
+                "subcategory": [
+                  "vuln"
+                ],
+                "references": [
+                  "https://cwe.mitre.org/data/definitions/319.html"
+                ],
+                "likelihood": "LOW",
+                "impact": "LOW",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Mishandled Sensitive Information"
+                ],
+                "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                "shortlink": "https://sg.run/RA5q"
+              },
+              "severity": "WARNING",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "category": "security",
+            "technology": [
+              "html"
+            ],
+            "cwe": [
+              "CWE-319: Cleartext Transmission of Sensitive Information"
+            ],
+            "owasp": [
+              "A03:2017 - Sensitive Data Exposure",
+              "A02:2021 - Cryptographic Failures",
+              "A04:2025 - Cryptographic Failures"
+            ],
+            "confidence": "HIGH",
+            "subcategory": [
+              "vuln"
+            ],
+            "references": [
+              "https://cwe.mitre.org/data/definitions/319.html"
+            ],
+            "likelihood": "LOW",
+            "impact": "LOW",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Mishandled Sensitive Information"
+            ],
+            "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+            "shortlink": "https://sg.run/RA5q"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "23ac0d79cedf6cbf8da6b5ca476795fa201f8fff973154ab3275509077fc2471",
+      "group_key": "63a6760c20cd9d6be3123a38316b228d3a4d46cfd0fba11ae839407d3e85e46d"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+        "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+        "start_line": 50,
+        "end_line": 50,
+        "severity": "medium",
+        "confidence": "high",
+        "cwe": "CWE-319",
+        "snippet": "Use latest stable version of node.js and express (or other web framework you are using). Keep a watch on published vulnerabilities of these. The vulnerabilities for node.js and express.js can be found <a href=\"http://blog.nodejs.org/vulnerability/\">here</a> and",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+              "start": {
+                "line": 50,
+                "col": 226,
+                "offset": 3084
+              },
+              "end": {
+                "line": 50,
+                "col": 282,
+                "offset": 3140
+              },
+              "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                  "category": "security",
+                  "technology": [
+                    "html"
+                  ],
+                  "cwe": [
+                    "CWE-319: Cleartext Transmission of Sensitive Information"
+                  ],
+                  "owasp": [
+                    "A03:2017 - Sensitive Data Exposure",
+                    "A02:2021 - Cryptographic Failures",
+                    "A04:2025 - Cryptographic Failures"
+                  ],
+                  "confidence": "HIGH",
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "references": [
+                    "https://cwe.mitre.org/data/definitions/319.html"
+                  ],
+                  "likelihood": "LOW",
+                  "impact": "LOW",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Mishandled Sensitive Information"
+                  ],
+                  "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                  "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "category": "security",
+              "technology": [
+                "html"
+              ],
+              "cwe": [
+                "CWE-319: Cleartext Transmission of Sensitive Information"
+              ],
+              "owasp": [
+                "A03:2017 - Sensitive Data Exposure",
+                "A02:2021 - Cryptographic Failures",
+                "A04:2025 - Cryptographic Failures"
+              ],
+              "confidence": "HIGH",
+              "subcategory": [
+                "vuln"
+              ],
+              "references": [
+                "https://cwe.mitre.org/data/definitions/319.html"
+              ],
+              "likelihood": "LOW",
+              "impact": "LOW",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Mishandled Sensitive Information"
+              ],
+              "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+              "shortlink": "https://sg.run/RA5q"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "23ac0d79cedf6cbf8da6b5ca476795fa201f8fff973154ab3275509077fc2471",
+        "group_key": "63a6760c20cd9d6be3123a38316b228d3a4d46cfd0fba11ae839407d3e85e46d"
+      }
+    ]
+  },
+  {
+    "group_key": "26e00dcc9c7b409b4626471c266270795b099586c3a88de21f316b91207de5fa",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+    "start_line": 51,
+    "end_line": 51,
+    "cwe": "CWE-319",
+    "severity": "medium",
+    "confidence": "high",
+    "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:html.security.plaintext-http-link.plaintext-http-link"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+      "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+      "start_line": 51,
+      "end_line": 51,
+      "severity": "medium",
+      "confidence": "high",
+      "cwe": "CWE-319",
+      "snippet": "<a href=\"http://expressjs.com/advanced/security-updates.html\">here</a>, respectively.",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+            "start": {
+              "line": 51,
+              "col": 25,
+              "offset": 3169
+            },
+            "end": {
+              "line": 51,
+              "col": 95,
+              "offset": 3239
+            },
+            "extra": {
+              "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+              "metadata": {
+                "category": "security",
+                "technology": [
+                  "html"
+                ],
+                "cwe": [
+                  "CWE-319: Cleartext Transmission of Sensitive Information"
+                ],
+                "owasp": [
+                  "A03:2017 - Sensitive Data Exposure",
+                  "A02:2021 - Cryptographic Failures",
+                  "A04:2025 - Cryptographic Failures"
+                ],
+                "confidence": "HIGH",
+                "subcategory": [
+                  "vuln"
+                ],
+                "references": [
+                  "https://cwe.mitre.org/data/definitions/319.html"
+                ],
+                "likelihood": "LOW",
+                "impact": "LOW",
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Mishandled Sensitive Information"
+                ],
+                "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                "shortlink": "https://sg.run/RA5q"
+              },
+              "severity": "WARNING",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "category": "security",
+            "technology": [
+              "html"
+            ],
+            "cwe": [
+              "CWE-319: Cleartext Transmission of Sensitive Information"
+            ],
+            "owasp": [
+              "A03:2017 - Sensitive Data Exposure",
+              "A02:2021 - Cryptographic Failures",
+              "A04:2025 - Cryptographic Failures"
+            ],
+            "confidence": "HIGH",
+            "subcategory": [
+              "vuln"
+            ],
+            "references": [
+              "https://cwe.mitre.org/data/definitions/319.html"
+            ],
+            "likelihood": "LOW",
+            "impact": "LOW",
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Mishandled Sensitive Information"
+            ],
+            "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+            "shortlink": "https://sg.run/RA5q"
+          },
+          "fix": null
+        }
+      },
+      "fingerprint": "95de5be0e044be65b020337c26d1300dd4def3b5996159183db70e82046a4103",
+      "group_key": "26e00dcc9c7b409b4626471c266270795b099586c3a88de21f316b91207de5fa"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "html.security.plaintext-http-link.plaintext-http-link",
+        "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+        "start_line": 51,
+        "end_line": 51,
+        "severity": "medium",
+        "confidence": "high",
+        "cwe": "CWE-319",
+        "snippet": "<a href=\"http://expressjs.com/advanced/security-updates.html\">here</a>, respectively.",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/app/views/tutorial/a5.html",
+              "start": {
+                "line": 51,
+                "col": 25,
+                "offset": 3169
+              },
+              "end": {
+                "line": 51,
+                "col": 95,
+                "offset": 3239
+              },
+              "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                  "category": "security",
+                  "technology": [
+                    "html"
+                  ],
+                  "cwe": [
+                    "CWE-319: Cleartext Transmission of Sensitive Information"
+                  ],
+                  "owasp": [
+                    "A03:2017 - Sensitive Data Exposure",
+                    "A02:2021 - Cryptographic Failures",
+                    "A04:2025 - Cryptographic Failures"
+                  ],
+                  "confidence": "HIGH",
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "references": [
+                    "https://cwe.mitre.org/data/definitions/319.html"
+                  ],
+                  "likelihood": "LOW",
+                  "impact": "LOW",
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Mishandled Sensitive Information"
+                  ],
+                  "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                  "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "category": "security",
+              "technology": [
+                "html"
+              ],
+              "cwe": [
+                "CWE-319: Cleartext Transmission of Sensitive Information"
+              ],
+              "owasp": [
+                "A03:2017 - Sensitive Data Exposure",
+                "A02:2021 - Cryptographic Failures",
+                "A04:2025 - Cryptographic Failures"
+              ],
+              "confidence": "HIGH",
+              "subcategory": [
+                "vuln"
+              ],
+              "references": [
+                "https://cwe.mitre.org/data/definitions/319.html"
+              ],
+              "likelihood": "LOW",
+              "impact": "LOW",
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Mishandled Sensitive Information"
+              ],
+              "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+              "shortlink": "https://sg.run/RA5q"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "95de5be0e044be65b020337c26d1300dd4def3b5996159183db70e82046a4103",
+        "group_key": "26e00dcc9c7b409b4626471c266270795b099586c3a88de21f316b91207de5fa"
+      }
+    ]
+  },
+  {
+    "group_key": "78a2812fdcc43131c30063cd3b41b40c12e955584598dccdc60ce625a60b8197",
+    "file": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+    "start_line": 78,
+    "end_line": 102,
+    "cwe": "CWE-522",
+    "severity": "medium",
+    "confidence": "medium",
+    "message": "Don’t use the default session cookie name Using the default session cookie name can open your app to attacks. The security issue posed is similar to X-Powered-By: a potential attacker can use it to fingerprint the server and target attacks accordingly.",
+    "tools": [
+      "semgrep"
+    ],
+    "tool_rule_ids": [
+      "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+      "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-domain",
+      "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-expires",
+      "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-httponly",
+      "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-path",
+      "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-secure"
+    ],
+    "representative": {
+      "tool": "semgrep",
+      "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+      "message": "Don’t use the default session cookie name Using the default session cookie name can open your app to attacks. The security issue posed is similar to X-Powered-By: a potential attacker can use it to fingerprint the server and target attacks accordingly.",
+      "file": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+      "start_line": 78,
+      "end_line": 102,
+      "severity": "medium",
+      "confidence": "medium",
+      "cwe": "CWE-522",
+      "snippet": "app.use(session({\n        // genid: (req) => {\n        //    return genuuid() // use UUIDs for session IDs\n        //},\n        secret: cookieSecret,\n        // Both mandatory in Express v4\n        saveUninitialized: true,\n        resave: true\n        /*\n        // Fix for A5 - Security MisConfig\n        // Use generic cookie name\n        key: \"sessionId\",\n        */\n\n        /*\n        // Fix for A3 - XSS\n        // TODO: Add \"maxAge\"\n        cookie: {\n            httpOnly: true\n            // Remember to start an HTTPS server to get this working\n            // secure: true\n        }\n        */\n\n    }));",
+      "evidence": {
+        "semgrep": {
+          "raw_result": {
+            "check_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+            "path": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+            "start": {
+              "line": 78,
+              "col": 13,
+              "offset": 2837
+            },
+            "end": {
+              "line": 102,
+              "col": 7,
+              "offset": 3439
+            },
+            "extra": {
+              "message": "Don’t use the default session cookie name Using the default session cookie name can open your app to attacks. The security issue posed is similar to X-Powered-By: a potential attacker can use it to fingerprint the server and target attacks accordingly.",
+              "metadata": {
+                "cwe": [
+                  "CWE-522: Insufficiently Protected Credentials"
+                ],
+                "owasp": [
+                  "A02:2017 - Broken Authentication",
+                  "A04:2021 - Insecure Design",
+                  "A06:2025 - Insecure Design"
+                ],
+                "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+                "category": "security",
+                "technology": [
+                  "express"
+                ],
+                "cwe2021-top25": true,
+                "subcategory": [
+                  "vuln"
+                ],
+                "likelihood": "HIGH",
+                "impact": "LOW",
+                "confidence": "MEDIUM",
+                "references": [
+                  "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                ],
+                "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                "vulnerability_class": [
+                  "Cryptographic Issues"
+                ],
+                "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+                "shortlink": "https://sg.run/1Z5x"
+              },
+              "severity": "WARNING",
+              "fingerprint": "requires login",
+              "lines": "requires login",
+              "validation_state": "NO_VALIDATOR",
+              "engine_kind": "OSS"
+            }
+          },
+          "tool_fingerprint": "requires login",
+          "metadata": {
+            "cwe": [
+              "CWE-522: Insufficiently Protected Credentials"
+            ],
+            "owasp": [
+              "A02:2017 - Broken Authentication",
+              "A04:2021 - Insecure Design",
+              "A06:2025 - Insecure Design"
+            ],
+            "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+            "category": "security",
+            "technology": [
+              "express"
+            ],
+            "cwe2021-top25": true,
+            "subcategory": [
+              "vuln"
+            ],
+            "likelihood": "HIGH",
+            "impact": "LOW",
+            "confidence": "MEDIUM",
+            "references": [
+              "https://owasp.org/Top10/A04_2021-Insecure_Design"
+            ],
+            "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+            "vulnerability_class": [
+              "Cryptographic Issues"
+            ],
+            "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+            "shortlink": "https://sg.run/1Z5x"
+          },
+          "fix": null
+        },
+        "merged_from": [
+          {
+            "tool": "semgrep",
+            "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-domain",
+            "severity": "medium",
+            "confidence": "medium",
+            "cwe": "CWE-522",
+            "fingerprint": "6498ffd87815d55dfe9976389041596baa4f8b6bf8b8df3a01afe0718055fe57"
+          },
+          {
+            "tool": "semgrep",
+            "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-expires",
+            "severity": "medium",
+            "confidence": "medium",
+            "cwe": "CWE-522",
+            "fingerprint": "b341d23a5a95a4e7951207ec68c5605b14d8692801ce051cb60f293cd124dfcf"
+          },
+          {
+            "tool": "semgrep",
+            "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-httponly",
+            "severity": "medium",
+            "confidence": "medium",
+            "cwe": "CWE-522",
+            "fingerprint": "1700e614b4bff9d6ea45102388e725b6a96c979b4a81e5fbf7ea9d19a4eb96f4"
+          },
+          {
+            "tool": "semgrep",
+            "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-path",
+            "severity": "medium",
+            "confidence": "medium",
+            "cwe": "CWE-522",
+            "fingerprint": "be21ba160efe40b5f14ace9e3f23eda63c02490f0ab99417cead008fe8e5cd6f"
+          },
+          {
+            "tool": "semgrep",
+            "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-secure",
+            "severity": "medium",
+            "confidence": "medium",
+            "cwe": "CWE-522",
+            "fingerprint": "55ceff79e00d1fcbdb7e0be92b3742a64e66bedf87b31110f4f8273905cb3f4a"
+          }
+        ],
+        "rule_ids": [
+          "javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+          "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-domain",
+          "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-expires",
+          "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-httponly",
+          "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-path",
+          "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-secure"
+        ],
+        "tool_rule_ids": [
+          "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+          "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-domain",
+          "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-expires",
+          "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-httponly",
+          "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-path",
+          "semgrep:javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-secure"
+        ],
+        "tools": [
+          "semgrep"
+        ]
+      },
+      "fingerprint": "5498ac1e1956d979281d9693b699e89fe560dba7ee1a27b44093858311fdeaaa",
+      "group_key": "78a2812fdcc43131c30063cd3b41b40c12e955584598dccdc60ce625a60b8197"
+    },
+    "members": [
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+        "message": "Don’t use the default session cookie name Using the default session cookie name can open your app to attacks. The security issue posed is similar to X-Powered-By: a potential attacker can use it to fingerprint the server and target attacks accordingly.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+        "start_line": 78,
+        "end_line": 102,
+        "severity": "medium",
+        "confidence": "medium",
+        "cwe": "CWE-522",
+        "snippet": "app.use(session({\n        // genid: (req) => {\n        //    return genuuid() // use UUIDs for session IDs\n        //},\n        secret: cookieSecret,\n        // Both mandatory in Express v4\n        saveUninitialized: true,\n        resave: true\n        /*\n        // Fix for A5 - Security MisConfig\n        // Use generic cookie name\n        key: \"sessionId\",\n        */\n\n        /*\n        // Fix for A3 - XSS\n        // TODO: Add \"maxAge\"\n        cookie: {\n            httpOnly: true\n            // Remember to start an HTTPS server to get this working\n            // secure: true\n        }\n        */\n\n    }));",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+              "start": {
+                "line": 78,
+                "col": 13,
+                "offset": 2837
+              },
+              "end": {
+                "line": 102,
+                "col": 7,
+                "offset": 3439
+              },
+              "extra": {
+                "message": "Don’t use the default session cookie name Using the default session cookie name can open your app to attacks. The security issue posed is similar to X-Powered-By: a potential attacker can use it to fingerprint the server and target attacks accordingly.",
+                "metadata": {
+                  "cwe": [
+                    "CWE-522: Insufficiently Protected Credentials"
+                  ],
+                  "owasp": [
+                    "A02:2017 - Broken Authentication",
+                    "A04:2021 - Insecure Design",
+                    "A06:2025 - Insecure Design"
+                  ],
+                  "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+                  "category": "security",
+                  "technology": [
+                    "express"
+                  ],
+                  "cwe2021-top25": true,
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "HIGH",
+                  "impact": "LOW",
+                  "confidence": "MEDIUM",
+                  "references": [
+                    "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                  ],
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Cryptographic Issues"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+                  "shortlink": "https://sg.run/1Z5x"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "cwe": [
+                "CWE-522: Insufficiently Protected Credentials"
+              ],
+              "owasp": [
+                "A02:2017 - Broken Authentication",
+                "A04:2021 - Insecure Design",
+                "A06:2025 - Insecure Design"
+              ],
+              "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+              "category": "security",
+              "technology": [
+                "express"
+              ],
+              "cwe2021-top25": true,
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "HIGH",
+              "impact": "LOW",
+              "confidence": "MEDIUM",
+              "references": [
+                "https://owasp.org/Top10/A04_2021-Insecure_Design"
+              ],
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Cryptographic Issues"
+              ],
+              "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-default-name",
+              "shortlink": "https://sg.run/1Z5x"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "5498ac1e1956d979281d9693b699e89fe560dba7ee1a27b44093858311fdeaaa",
+        "group_key": ""
+      },
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-domain",
+        "message": "Default session middleware settings: `domain` not set. It indicates the domain of the cookie; use it to compare against the domain of the server in which the URL is being requested. If they match, then check the path attribute next.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+        "start_line": 78,
+        "end_line": 102,
+        "severity": "medium",
+        "confidence": "medium",
+        "cwe": "CWE-522",
+        "snippet": "app.use(session({\n        // genid: (req) => {\n        //    return genuuid() // use UUIDs for session IDs\n        //},\n        secret: cookieSecret,\n        // Both mandatory in Express v4\n        saveUninitialized: true,\n        resave: true\n        /*\n        // Fix for A5 - Security MisConfig\n        // Use generic cookie name\n        key: \"sessionId\",\n        */\n\n        /*\n        // Fix for A3 - XSS\n        // TODO: Add \"maxAge\"\n        cookie: {\n            httpOnly: true\n            // Remember to start an HTTPS server to get this working\n            // secure: true\n        }\n        */\n\n    }));",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-domain",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+              "start": {
+                "line": 78,
+                "col": 13,
+                "offset": 2837
+              },
+              "end": {
+                "line": 102,
+                "col": 7,
+                "offset": 3439
+              },
+              "extra": {
+                "message": "Default session middleware settings: `domain` not set. It indicates the domain of the cookie; use it to compare against the domain of the server in which the URL is being requested. If they match, then check the path attribute next.",
+                "metadata": {
+                  "cwe": [
+                    "CWE-522: Insufficiently Protected Credentials"
+                  ],
+                  "owasp": [
+                    "A02:2017 - Broken Authentication",
+                    "A04:2021 - Insecure Design",
+                    "A06:2025 - Insecure Design"
+                  ],
+                  "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+                  "category": "security",
+                  "technology": [
+                    "express"
+                  ],
+                  "cwe2021-top25": true,
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "HIGH",
+                  "impact": "LOW",
+                  "confidence": "MEDIUM",
+                  "references": [
+                    "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                  ],
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Cryptographic Issues"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-domain",
+                  "shortlink": "https://sg.run/rd41"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "cwe": [
+                "CWE-522: Insufficiently Protected Credentials"
+              ],
+              "owasp": [
+                "A02:2017 - Broken Authentication",
+                "A04:2021 - Insecure Design",
+                "A06:2025 - Insecure Design"
+              ],
+              "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+              "category": "security",
+              "technology": [
+                "express"
+              ],
+              "cwe2021-top25": true,
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "HIGH",
+              "impact": "LOW",
+              "confidence": "MEDIUM",
+              "references": [
+                "https://owasp.org/Top10/A04_2021-Insecure_Design"
+              ],
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Cryptographic Issues"
+              ],
+              "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-domain",
+              "shortlink": "https://sg.run/rd41"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "6498ffd87815d55dfe9976389041596baa4f8b6bf8b8df3a01afe0718055fe57",
+        "group_key": ""
+      },
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-expires",
+        "message": "Default session middleware settings: `expires` not set. Use it to set expiration date for persistent cookies.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+        "start_line": 78,
+        "end_line": 102,
+        "severity": "medium",
+        "confidence": "medium",
+        "cwe": "CWE-522",
+        "snippet": "app.use(session({\n        // genid: (req) => {\n        //    return genuuid() // use UUIDs for session IDs\n        //},\n        secret: cookieSecret,\n        // Both mandatory in Express v4\n        saveUninitialized: true,\n        resave: true\n        /*\n        // Fix for A5 - Security MisConfig\n        // Use generic cookie name\n        key: \"sessionId\",\n        */\n\n        /*\n        // Fix for A3 - XSS\n        // TODO: Add \"maxAge\"\n        cookie: {\n            httpOnly: true\n            // Remember to start an HTTPS server to get this working\n            // secure: true\n        }\n        */\n\n    }));",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-expires",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+              "start": {
+                "line": 78,
+                "col": 13,
+                "offset": 2837
+              },
+              "end": {
+                "line": 102,
+                "col": 7,
+                "offset": 3439
+              },
+              "extra": {
+                "message": "Default session middleware settings: `expires` not set. Use it to set expiration date for persistent cookies.",
+                "metadata": {
+                  "cwe": [
+                    "CWE-522: Insufficiently Protected Credentials"
+                  ],
+                  "owasp": [
+                    "A02:2017 - Broken Authentication",
+                    "A04:2021 - Insecure Design",
+                    "A06:2025 - Insecure Design"
+                  ],
+                  "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+                  "category": "security",
+                  "technology": [
+                    "express"
+                  ],
+                  "cwe2021-top25": true,
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "HIGH",
+                  "impact": "LOW",
+                  "confidence": "MEDIUM",
+                  "references": [
+                    "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                  ],
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Cryptographic Issues"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-expires",
+                  "shortlink": "https://sg.run/N4eG"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "cwe": [
+                "CWE-522: Insufficiently Protected Credentials"
+              ],
+              "owasp": [
+                "A02:2017 - Broken Authentication",
+                "A04:2021 - Insecure Design",
+                "A06:2025 - Insecure Design"
+              ],
+              "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+              "category": "security",
+              "technology": [
+                "express"
+              ],
+              "cwe2021-top25": true,
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "HIGH",
+              "impact": "LOW",
+              "confidence": "MEDIUM",
+              "references": [
+                "https://owasp.org/Top10/A04_2021-Insecure_Design"
+              ],
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Cryptographic Issues"
+              ],
+              "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-expires",
+              "shortlink": "https://sg.run/N4eG"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "b341d23a5a95a4e7951207ec68c5605b14d8692801ce051cb60f293cd124dfcf",
+        "group_key": ""
+      },
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-httponly",
+        "message": "Default session middleware settings: `httpOnly` not set. It ensures the cookie is sent only over HTTP(S), not client JavaScript, helping to protect against cross-site scripting attacks.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+        "start_line": 78,
+        "end_line": 102,
+        "severity": "medium",
+        "confidence": "medium",
+        "cwe": "CWE-522",
+        "snippet": "app.use(session({\n        // genid: (req) => {\n        //    return genuuid() // use UUIDs for session IDs\n        //},\n        secret: cookieSecret,\n        // Both mandatory in Express v4\n        saveUninitialized: true,\n        resave: true\n        /*\n        // Fix for A5 - Security MisConfig\n        // Use generic cookie name\n        key: \"sessionId\",\n        */\n\n        /*\n        // Fix for A3 - XSS\n        // TODO: Add \"maxAge\"\n        cookie: {\n            httpOnly: true\n            // Remember to start an HTTPS server to get this working\n            // secure: true\n        }\n        */\n\n    }));",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-httponly",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+              "start": {
+                "line": 78,
+                "col": 13,
+                "offset": 2837
+              },
+              "end": {
+                "line": 102,
+                "col": 7,
+                "offset": 3439
+              },
+              "extra": {
+                "message": "Default session middleware settings: `httpOnly` not set. It ensures the cookie is sent only over HTTP(S), not client JavaScript, helping to protect against cross-site scripting attacks.",
+                "metadata": {
+                  "cwe": [
+                    "CWE-522: Insufficiently Protected Credentials"
+                  ],
+                  "owasp": [
+                    "A02:2017 - Broken Authentication",
+                    "A04:2021 - Insecure Design",
+                    "A06:2025 - Insecure Design"
+                  ],
+                  "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+                  "category": "security",
+                  "technology": [
+                    "express"
+                  ],
+                  "cwe2021-top25": true,
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "HIGH",
+                  "impact": "LOW",
+                  "confidence": "MEDIUM",
+                  "references": [
+                    "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                  ],
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Cryptographic Issues"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-httponly",
+                  "shortlink": "https://sg.run/ydBO"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "cwe": [
+                "CWE-522: Insufficiently Protected Credentials"
+              ],
+              "owasp": [
+                "A02:2017 - Broken Authentication",
+                "A04:2021 - Insecure Design",
+                "A06:2025 - Insecure Design"
+              ],
+              "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+              "category": "security",
+              "technology": [
+                "express"
+              ],
+              "cwe2021-top25": true,
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "HIGH",
+              "impact": "LOW",
+              "confidence": "MEDIUM",
+              "references": [
+                "https://owasp.org/Top10/A04_2021-Insecure_Design"
+              ],
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Cryptographic Issues"
+              ],
+              "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-httponly",
+              "shortlink": "https://sg.run/ydBO"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "1700e614b4bff9d6ea45102388e725b6a96c979b4a81e5fbf7ea9d19a4eb96f4",
+        "group_key": ""
+      },
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-path",
+        "message": "Default session middleware settings: `path` not set. It indicates the path of the cookie; use it to compare against the request path. If this and domain match, then send the cookie in the request.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+        "start_line": 78,
+        "end_line": 102,
+        "severity": "medium",
+        "confidence": "medium",
+        "cwe": "CWE-522",
+        "snippet": "app.use(session({\n        // genid: (req) => {\n        //    return genuuid() // use UUIDs for session IDs\n        //},\n        secret: cookieSecret,\n        // Both mandatory in Express v4\n        saveUninitialized: true,\n        resave: true\n        /*\n        // Fix for A5 - Security MisConfig\n        // Use generic cookie name\n        key: \"sessionId\",\n        */\n\n        /*\n        // Fix for A3 - XSS\n        // TODO: Add \"maxAge\"\n        cookie: {\n            httpOnly: true\n            // Remember to start an HTTPS server to get this working\n            // secure: true\n        }\n        */\n\n    }));",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-path",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+              "start": {
+                "line": 78,
+                "col": 13,
+                "offset": 2837
+              },
+              "end": {
+                "line": 102,
+                "col": 7,
+                "offset": 3439
+              },
+              "extra": {
+                "message": "Default session middleware settings: `path` not set. It indicates the path of the cookie; use it to compare against the request path. If this and domain match, then send the cookie in the request.",
+                "metadata": {
+                  "cwe": [
+                    "CWE-522: Insufficiently Protected Credentials"
+                  ],
+                  "owasp": [
+                    "A02:2017 - Broken Authentication",
+                    "A04:2021 - Insecure Design",
+                    "A06:2025 - Insecure Design"
+                  ],
+                  "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+                  "category": "security",
+                  "technology": [
+                    "express"
+                  ],
+                  "cwe2021-top25": true,
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "HIGH",
+                  "impact": "LOW",
+                  "confidence": "MEDIUM",
+                  "references": [
+                    "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                  ],
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Cryptographic Issues"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-path",
+                  "shortlink": "https://sg.run/b7pd"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "cwe": [
+                "CWE-522: Insufficiently Protected Credentials"
+              ],
+              "owasp": [
+                "A02:2017 - Broken Authentication",
+                "A04:2021 - Insecure Design",
+                "A06:2025 - Insecure Design"
+              ],
+              "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+              "category": "security",
+              "technology": [
+                "express"
+              ],
+              "cwe2021-top25": true,
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "HIGH",
+              "impact": "LOW",
+              "confidence": "MEDIUM",
+              "references": [
+                "https://owasp.org/Top10/A04_2021-Insecure_Design"
+              ],
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Cryptographic Issues"
+              ],
+              "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-path",
+              "shortlink": "https://sg.run/b7pd"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "be21ba160efe40b5f14ace9e3f23eda63c02490f0ab99417cead008fe8e5cd6f",
+        "group_key": ""
+      },
+      {
+        "tool": "semgrep",
+        "rule_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-secure",
+        "message": "Default session middleware settings: `secure` not set. It ensures the browser only sends the cookie over HTTPS.",
+        "file": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+        "start_line": 78,
+        "end_line": 102,
+        "severity": "medium",
+        "confidence": "medium",
+        "cwe": "CWE-522",
+        "snippet": "app.use(session({\n        // genid: (req) => {\n        //    return genuuid() // use UUIDs for session IDs\n        //},\n        secret: cookieSecret,\n        // Both mandatory in Express v4\n        saveUninitialized: true,\n        resave: true\n        /*\n        // Fix for A5 - Security MisConfig\n        // Use generic cookie name\n        key: \"sessionId\",\n        */\n\n        /*\n        // Fix for A3 - XSS\n        // TODO: Add \"maxAge\"\n        cookie: {\n            httpOnly: true\n            // Remember to start an HTTPS server to get this working\n            // secure: true\n        }\n        */\n\n    }));",
+        "evidence": {
+          "semgrep": {
+            "raw_result": {
+              "check_id": "javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-secure",
+              "path": "/Users/samad/Documents/Python-projects/NodeGoat/server.js",
+              "start": {
+                "line": 78,
+                "col": 13,
+                "offset": 2837
+              },
+              "end": {
+                "line": 102,
+                "col": 7,
+                "offset": 3439
+              },
+              "extra": {
+                "message": "Default session middleware settings: `secure` not set. It ensures the browser only sends the cookie over HTTPS.",
+                "metadata": {
+                  "cwe": [
+                    "CWE-522: Insufficiently Protected Credentials"
+                  ],
+                  "owasp": [
+                    "A02:2017 - Broken Authentication",
+                    "A04:2021 - Insecure Design",
+                    "A06:2025 - Insecure Design"
+                  ],
+                  "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+                  "category": "security",
+                  "technology": [
+                    "express"
+                  ],
+                  "cwe2021-top25": true,
+                  "subcategory": [
+                    "vuln"
+                  ],
+                  "likelihood": "HIGH",
+                  "impact": "LOW",
+                  "confidence": "MEDIUM",
+                  "references": [
+                    "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                  ],
+                  "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                  "vulnerability_class": [
+                    "Cryptographic Issues"
+                  ],
+                  "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-secure",
+                  "shortlink": "https://sg.run/9oKz"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+              }
+            },
+            "tool_fingerprint": "requires login",
+            "metadata": {
+              "cwe": [
+                "CWE-522: Insufficiently Protected Credentials"
+              ],
+              "owasp": [
+                "A02:2017 - Broken Authentication",
+                "A04:2021 - Insecure Design",
+                "A06:2025 - Insecure Design"
+              ],
+              "source-rule-url": "https://expressjs.com/en/advanced/best-practice-security.html",
+              "category": "security",
+              "technology": [
+                "express"
+              ],
+              "cwe2021-top25": true,
+              "subcategory": [
+                "vuln"
+              ],
+              "likelihood": "HIGH",
+              "impact": "LOW",
+              "confidence": "MEDIUM",
+              "references": [
+                "https://owasp.org/Top10/A04_2021-Insecure_Design"
+              ],
+              "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+              "vulnerability_class": [
+                "Cryptographic Issues"
+              ],
+              "source": "https://semgrep.dev/r/javascript.express.security.audit.express-cookie-settings.express-cookie-session-no-secure",
+              "shortlink": "https://sg.run/9oKz"
+            },
+            "fix": null
+          }
+        },
+        "fingerprint": "55ceff79e00d1fcbdb7e0be92b3742a64e66bedf87b31110f4f8273905cb3f4a",
+        "group_key": ""
+      }
+    ]
+  }
+]
